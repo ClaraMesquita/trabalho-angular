@@ -1,0 +1,26 @@
+<br>
+<div class="container" id="list-render-card">
+  <form class="form-horizontal" [formGroup]="formulario" (ngSubmit)="onSubmit()" style="width: 300px;">
+      <div class="form-group">
+        <label for="nome">Nome</label>
+        <input type="text" class="form-control" formControlName = "nome" id="nome" placeholder="Nome">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" formControlName="email" id="email" placeholder="nome@email.com">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      </div>
+      <div class="form-group">
+        <label for="nome">Telefone</label>
+        <input type="text" class="form-control" formControlName = "telefone" id="telefone" placeholder="(11) 9 9999-9999">
+      </div>
+      <div class="form-group">
+        <label for="nome">Empresa</label>
+        <input type="text" class="form-control" formControlName = "empresa" id="empresa" placeholder="Empresa">
+      </div>
+      <button type="submit" class="btn btn-success">Adicionar</button>
+  </form>
+</div>
+<br>
+
+   

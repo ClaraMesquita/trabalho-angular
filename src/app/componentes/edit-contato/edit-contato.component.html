@@ -1,0 +1,23 @@
+<p>edit-contato works!</p>
+<div class="container" id="list-render-card">
+    <form class="form-horizontal" [formGroup]="formulario" (ngSubmit)="onSubmit()" style="width: 300px;">
+        <div class="form-group">
+          <label for="nome">Nome</label>
+          <input type="text" class="form-control" formControlName = "nome" id="nome" placeholder="{{ contato.nome }}">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email</label>
+          <input type="email" class="form-control" formControlName="email" id="email" placeholder="{{ contato.email }}">
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+          <label for="nome">Telefone</label>
+          <input type="text" class="form-control" formControlName = "telefone" id="telefone" placeholder="{{ contato.telefone }}">
+        </div>
+        <div class="form-group">
+          <label for="nome">Empresa</label>
+          <input type="text" class="form-control" formControlName = "empresa" id="empresa" placeholder="{{ contato.empresa }}">
+        </div>
+        <button type="submit" class="btn btn-primary">Editar</button>
+    </form>
+  </div>

@@ -1,0 +1,22 @@
+<div class="container">
+    <br>
+    <h2>Detalhes do contato</h2>
+    <p></p>
+    <div *ngIf="contato" class="list-group" class="card" style="width: 18rem;">
+        <div class="card-header">
+            {{ contato.nome }}
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item"><p>ID: {{ contato.id }}</p></li>
+            <li class="list-group-item"><p>Empresa: {{ contato.empresa }}</p></li>
+            <li class="list-group-item"><p>Email: {{ contato.email }}</p></li>
+            <li class="list-group-item"><p>Telefone: {{ contato.telefone }}</p></li>
+        </ul>
+    </div>
+    <br>
+    <div class="container">
+    <button type="button" class="btn btn-primary" *ngIf="contato" routerLink="/edit-contato/{{contato.id}}" style="margin-right: 10px;">Editar contato</button>
+    <button type="button" class="btn btn-secondary" routerLink="/list" >Ir para Lista</button>
+    </div>
+    <br>   
+</div>

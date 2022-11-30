@@ -18,6 +18,9 @@
           <label for="nome">Empresa</label>
           <input type="text" class="form-control" formControlName = "empresa" id="empresa" placeholder="{{ contato.empresa }}">
         </div>
-        <button type="submit" class="btn btn-primary">Editar</button>
+        <div>
+          <button type="submit" class="btn btn-primary" style="margin-right: 100px;">Editar</button>
+          <button type="button" class="btn btn-secondary" routerLink="/list" >Ir para Lista</button>
+        </div>
     </form>
   </div>

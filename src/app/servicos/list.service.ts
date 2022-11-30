@@ -15,8 +15,8 @@ export class ListService {
     return this.http.post<Contato>(this.apiUrlContatos,contato);    
   }
 
-  putContato(contato: Contato, id:Number) {
-    return this.http.put<Contato>(`${this.apiUrlContatos}/${id}`,contato);    
+  updateContato(contato: Contato, id:Number): Observable <Contato> {
+    return this.http.patch<Contato>(`${this.apiUrlContatos}/${id}`,contato);    
   }
 
   getAll():Observable<Contato[]> {

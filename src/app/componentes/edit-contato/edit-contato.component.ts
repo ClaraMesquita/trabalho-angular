@@ -22,13 +22,13 @@ export class EditContatoComponent {
                 this.getContato();
                }
 
-  ngOnInit(): void {
-    this.formulario = this.formBuilder.group({
-      nome: this.contato.nome,
-      empresa: this.contato.empresa,
-      telefone: this.contato.telefone,
-      email: this.contato.email,
-    });
+               ngOnInit(): void {
+                this.formulario = this.formBuilder.group({
+                  nome: [null],
+                  empresa: [null],
+                  telefone: [null],
+                  email: [null],
+                });
   }
 
   getContato() {
@@ -38,13 +38,10 @@ export class EditContatoComponent {
   
   onSubmit() {
     console.log(this.formulario.value);
-    this.contato.nome = this.formulario.value;
-    this.contato.empresa = this.formulario.value;
-    this.contato.telefone = this.formulario.value;
-    this.contato.email = this.formulario.value;
+    this.contato = this.formulario.value;
     console.log(this.contato);
-    this.listService.putContato(this.contato,this.contato.id).subscribe();
-    this.router.navigate(['/']);
+    this.listService.setContato(this.contato).subscribe();
+    this.router.navigate(['/list']);
   }
 
 }

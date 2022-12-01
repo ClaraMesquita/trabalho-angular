@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Contato } from 'src/app/Contato';
 import { ListService } from 'src/app/servicos/list.service';
 
@@ -7,13 +7,17 @@ import { ListService } from 'src/app/servicos/list.service';
   templateUrl: './list-render.component.html',
   styleUrls: ['./list-render.component.css']
 })
+
 export class ListRenderComponent {
   contatos: Contato[] = [];
-  mostrar = true;
+  searchText: string  ='';
+
   constructor(private listService: ListService) {
     this.getContato();
    }
+   
   ngOnInit(): void {
+    
   }
 
   removeContato(contato: Contato) {

@@ -22,13 +22,13 @@ export class EditContatoComponent {
                 this.getContato();
                }
 
-               ngOnInit(): void {
-                this.formulario = this.formBuilder.group({
-                  nome: [null],
-                  empresa: [null],
-                  telefone: [null],
-                  email: [null],
-                });
+  ngOnInit(): void {
+    this.formulario = this.formBuilder.group({
+      nome: [null],
+      empresa: [null],
+      telefone: [null],
+      email: [null],
+    });
   }
 
   getContato() {

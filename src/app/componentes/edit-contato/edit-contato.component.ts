@@ -14,6 +14,7 @@ export class EditContatoComponent {
 
   formulario!: FormGroup;
   contato!: Contato;
+  id!: number;
 
   constructor(private listService: ListService,
               private formBuilder: FormBuilder,
@@ -37,10 +38,15 @@ export class EditContatoComponent {
   }
   
   onSubmit() {
+    console.log(this.contato);
+    console.log(this.contato.id);
+    this.id = this.contato.id;
     console.log(this.formulario.value);
     this.contato = this.formulario.value;
     console.log(this.contato);
-    this.listService.setContato(this.contato).subscribe();
+    console.log(this.contato.id);
+    console.log(this.id);
+    this.listService.updateContato(this.contato,this.id).subscribe();
     this.router.navigate(['/list']);
   }
 
